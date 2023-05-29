@@ -8,7 +8,8 @@
     "build": "esbuild index.js --bundle --platform=node --target=node14 --outfile=build/out.js",
     "buildBrowserExample": "esbuild app.jsx --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16",
     "buildWithoutDependecies:": "esbuild app.jsx --bundle --platform=node --packages=external",
-    "buildAlternative": "esbuild index.js  --bundle --outfile=build.cjs --format=cjs --platform=node"
+    "buildAlternative": "esbuild index.js  --bundle --outfile=build.cjs --format=cjs --platform=node",
+    "buildExecutable": "npx pkg build/build.cjs --out-path build/"
   },
   "keywords": [],
   "author": "gustavohdev",
