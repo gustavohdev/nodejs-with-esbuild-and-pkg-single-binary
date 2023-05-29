@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-with-esbuild-and-pkg-single-binary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild index.js --bundle --platform=node --target=node14 --outfile=build/out.js",
+    "buildBrowserExample": "esbuild app.jsx --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16",
+    "buildWithoutDependecies:": "esbuild app.jsx --bundle --platform=node --packages=external",
+    "buildAlternative": "esbuild index.js  --bundle --outfile=build.cjs --format=cjs --platform=node"
+  },
+  "keywords": [],
+  "author": "gustavohdev",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.2"
+  },
+  "dependencies": {
+    "esbuild": "0.17.19"
+  }
+}
